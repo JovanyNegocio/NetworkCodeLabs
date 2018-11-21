@@ -6,6 +6,8 @@ public interface MainContrat {
 
         void setPresenter(Presenter presenter);
 
+        void setLoadingPosts(boolean isloading);
+
         void setPosts(Post[] posts);
 
         void showError(String title, String error);
