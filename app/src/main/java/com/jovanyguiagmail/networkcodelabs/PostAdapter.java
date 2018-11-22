@@ -14,7 +14,7 @@ import org.w3c.dom.Text;
 
 public class PostAdapter extends RecyclerView.Adapter<PostAdapter.PostViewHolder> {
 
-    private Post[] posts = new Post[0];
+    Post[] posts = new Post[0];
 
     @NonNull
     @Override
