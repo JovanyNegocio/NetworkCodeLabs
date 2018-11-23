@@ -10,8 +10,6 @@ import android.widget.TextView;
 
 import com.squareup.picasso.Picasso;
 
-import org.w3c.dom.Text;
-
 public class PostAdapter extends RecyclerView.Adapter<PostAdapter.PostViewHolder> {
 
     Post[] posts = new Post[0];
@@ -29,12 +27,12 @@ public class PostAdapter extends RecyclerView.Adapter<PostAdapter.PostViewHolder
         Post post = posts[position];
         postViewHolder.postName.setText(post.name);
         postViewHolder.postMessage.setText(post.message);
-        Picasso.get().load(post.profileUrl).into(postViewHolder.postImage);
+        Picasso.get().load(post.profileImage).into(postViewHolder.postImage);
     }
 
     @Override
     public int getItemCount() {
-        return 0;
+        return posts.length;
     }
 
     class PostViewHolder extends RecyclerView.ViewHolder{
