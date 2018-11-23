@@ -1,2 +1,2 @@
 # NetworkCodeLabs
-Segundo aplicativo desenvilvido no curso Android para visionários da Buka!
+Segundo aplicativo desenvolvido no curso Android para visionários da Buka!
