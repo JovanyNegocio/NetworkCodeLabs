@@ -1,5 +1,6 @@
 package com.jovanyguiagmail.networkcodelabs;
 
+import android.os.AsyncTask;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
@@ -43,9 +44,17 @@ public class MainActivity extends AppCompatActivity implements MainContrat.View 
 
 
     @Override
-    public void setPresenter(MainContrat.Presenter presenter) {
+    public void setPresenter(final MainContrat.Presenter presenter) {
         this.presenter = presenter;
-        presenter.start();
+        new AsyncTask<Void, Void, Void>() {
+
+
+            @Override
+            protected Void doInBackground(Void... voids) {
+                presenter.start();
+                return null;
+            }
+        }.execute();
 
     }
 
